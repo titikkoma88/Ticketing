@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuHome"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+
+    <item android:title="My Ticket"
+        android:id="@+id/menuMy"
+        android:icon="@drawable/ic_autorenew_black_24dp"/>
+
+    <item android:title="List Ticket"
+        android:id="@+id/menuList"
+        android:icon="@drawable/ic_autorenew_black_24dp"/>
+
+    <item android:title="Change Password"
+        android:id="@+id/menuChange"
+        android:icon="@drawable/ic_autorenew_black_24dp"/>
+
+    <item android:title="Logout"
+        android:id="@+id/menuLogout"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+
+    <item android:title="Exit"
+        android:id="@+id/menuExit"
+        android:icon="@drawable/ic_keyboard_tab_black_24dp"/>
+
+</menu>
