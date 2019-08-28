@@ -26,9 +26,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static ticket.modernland.co.id.R.id.rv2;
-
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -46,7 +43,7 @@ public class MyTicketFragment extends Fragment {
         // Inflate the layout for this fragment
         View x =  inflater.inflate(R.layout.fragment_list_ticket, container, false);
 
-        final RecyclerView rv2 = (RecyclerView) x.findViewById(R.id.rv2);
+        final RecyclerView rvMy = (RecyclerView) x.findViewById(R.id.rvMy);
 
         SharedPreferences sp = getActivity()
                 .getSharedPreferences("DATALOGIN", 0);
@@ -56,7 +53,7 @@ public class MyTicketFragment extends Fragment {
 
         final LinearLayoutManager lm = new LinearLayoutManager(getActivity());
         lm.setOrientation(LinearLayoutManager.VERTICAL);
-        rv2.setLayoutManager(lm);
+        rvMy.setLayoutManager(lm);
 
         // 1. postman
         OkHttpClient postman = new OkHttpClient();
@@ -114,7 +111,7 @@ public class MyTicketFragment extends Fragment {
                         @Override
                         public void run() {
                             pd.dismiss();
-                            rv2.setAdapter(adapter);
+                            rvMy.setAdapter(adapter);
                         }
                     });
                 } catch (JSONException e) {

@@ -43,7 +43,7 @@ public class ListTicketFragment extends Fragment {
         // Inflate the layout for this fragment
         View x =  inflater.inflate(R.layout.fragment_list_ticket, container, false);
 
-        final RecyclerView rv3 = (RecyclerView) x.findViewById(R.id.rv3);
+        final RecyclerView rvList = (RecyclerView) x.findViewById(R.id.rvList);
 
         SharedPreferences sp = getActivity()
                 .getSharedPreferences("DATALOGIN", 0);
@@ -55,7 +55,7 @@ public class ListTicketFragment extends Fragment {
 
         LinearLayoutManager lm = new LinearLayoutManager(getActivity());
         lm.setOrientation(LinearLayoutManager.VERTICAL);
-        rv3.setLayoutManager(lm);
+        rvList.setLayoutManager(lm);
 
         // 1. postman
         OkHttpClient postman = new OkHttpClient();
@@ -113,7 +113,7 @@ public class ListTicketFragment extends Fragment {
                         @Override
                         public void run() {
                             pd.dismiss();
-                            rv3.setAdapter(adapter);
+                            rvList.setAdapter(adapter);
                         }
                     });
                 } catch (JSONException e) {
